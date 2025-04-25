@@ -1,0 +1,51 @@
+
+<div class="submit-form">
+    <div class="form-group">
+        Name:
+        <input
+            class="form-control spaced-element"
+            id="name"
+            name="name"
+            placeholder="Enter car name"
+            type="text"
+            [(ngModel)]="car.name"
+        />
+        Price:
+        <input
+            class="form-control spaced-element"
+            id="price"
+            name="price"
+            placeholder="Enter car price"
+            type="number"
+            [(ngModel)]="car.price"
+        />
+        Quantity:
+        <input
+            class="form-control spaced-element"
+            id="quantity"
+            name="quantity"
+            placeholder="Enter car quantity"
+            type="number"
+            [(ngModel)]="car.quantity"
+        />
+       
+        
+        Dealership Name:  
+        <select
+            class="form-control spaced-element"
+            id="dealershipName"
+            name="dealershipName"
+            [(ngModel)]="car.dealershipName">
+            <option value="" disabled selected>Select a dealership</option>
+            @for (dealership of dealerships; track dealership.name) {
+                <option> {{ dealership.name}} </option>
+            }
+            
+        </select>
+
+    
+        <button
+            class="btn btn-success spaced-element" (click)="saveCar()"> Submit
+        </button>
+    </div>
+</div>

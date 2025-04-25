@@ -1,0 +1,27 @@
+
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Dealership Name</th>
+    </tr>
+  </thead>
+
+  @for (car of cars; track car.id){
+    <tr>
+      <td>{{ car.id }}</td>
+      <td>{{ car.name }}</td>
+      <td>{{ car.price }}</td>
+      <td>{{ car.quantity }}</td>
+      <td>{{ car.dealershipName }}</td>
+      <td>
+        <button class="btn danger" (click)="deleteCar(car)">Delete</button>
+      </td>
+    </tr>
+  }
+
+</table>

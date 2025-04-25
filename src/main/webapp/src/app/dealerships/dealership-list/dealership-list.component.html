@@ -1,0 +1,17 @@
+
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+
+  @for (dealership of dealerships; track dealership.id){
+    <tr>
+      <td>{{ dealership.id }}</td>
+      <td>{{ dealership.name }}</td>
+    </tr>
+  }
+</table>

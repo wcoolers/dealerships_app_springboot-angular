@@ -1,0 +1,17 @@
+
+<div class="submit-form">
+    <div class="form-group">
+        Name:
+        <input
+            class="form-control spaced-element"
+            id="name"
+            name="name"
+            placeholder="Enter dealership name"
+            type="text"
+            [(ngModel)]="dealership.name"
+        />
+        <button
+            class="btn btn-success spaced-element" (click)="saveDealership()"> Submit
+        </button>
+    </div>
+</div>
